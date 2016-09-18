@@ -1,0 +1,174 @@
+$brown: #584731;
+$cream: #FAFFDF;
+$black: #010101;
+$blue: #CADDFD;
+$red: #A96B53;
+
+html{
+  background: $black;
+}
+
+*{
+  color: $blue;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0 2rem 2rem;
+}
+
+h1{
+  font-size: 5rem;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  color: $cream;
+}
+
+h2{
+  text-align: center;
+  font-size: 4rem;
+  color: $red;
+  margin: 0 0 2rem 0;
+}
+
+h3{
+  color: $red;
+  font-size: 1.6rem;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+p{
+  color: $cream;
+  margin: 0 0 0.8rem 0;
+}
+
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.main.menu{
+  text-align: center;
+
+  .toggle{
+    height: 170px;
+  }
+
+  .icon{
+    font-size: 5rem;
+    height: 110px;
+  }
+
+  ul{
+    display: none;
+  }
+
+  ul.menu-open{
+    display: block;
+  }
+
+  li{
+    height: 6rem;
+  }
+
+  a{
+    font-size: 3rem;
+  }
+}
+
+.vertical-align-parent{
+  display: table;
+  width: 100%;
+
+  & > *{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.home{
+
+}
+
+.cv{
+  .menu{
+    li{
+      height: 4rem;
+    }
+  }
+
+  .date{
+    font-size: 1.2rem;
+  }
+
+  .secondary.date{
+    font-size: 0.9rem;
+  }
+
+  .technologies li{
+    color: $cream;
+  }
+}
+
+.links{
+
+}
+
+@media (min-device-width: 768px){
+  body{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  h1{
+    margin: 0 0 50px;
+  }
+
+  p,
+  li{
+    line-height: 1.5rem;
+  }
+
+  .main.menu{
+    .toggle{
+      display: none;
+    }
+
+    ul{
+      display: block;
+      height: 3rem;
+    }
+
+    li{
+      display: inline-block;
+      width: initial;
+      height: 3rem;
+      padding: 0.5rem 0;
+
+      a{
+        display: block;
+        font-size: 1.5rem;
+        padding: 10px;
+      }
+    }
+  }
+
+  .cv{
+    margin: 0 10%;
+
+    .menu{
+      li{
+        display: inline-block;
+        height: inherit;
+      }
+
+      a{
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
+}
