@@ -7,6 +7,38 @@
           href="http://yui.yahooapis.com/3.5.0/build/cssreset/cssreset-min.css"/>
 </head>
 <body>
+
+<nav class="main menu">
+    <a class="toggle" ng-click="Page.toggleMenu()">
+        <div class="vertical-align-parent">
+            <span class="icon" ng-show="!Page.getMenuIsOpen()">&#9776;</span>
+            <span class="icon" ng-show="Page.getMenuIsOpen()">&#88;</span>
+        </div>
+        <div class="vertical-align-parent">
+            <span ng-bind="Page.getMenuMessage()"></span>
+        </div>
+    </a>
+    <ul ng-class="{'menu-open': Page.getMenuIsOpen()}">
+        <li class="vertical-align-parent"><a href="#/">Home</a></li>
+        <li class="vertical-align-parent"><a href="#/cv">CV</a></li>
+        <li class="vertical-align-parent">
+            <a href="http://agilegeorge.blogspot.co.uk" target="_blank">Agile Blog</a>
+        </li>
+        <!--<li class="vertical-align-parent"><a href="#/links">Links</a></li>-->
+        <li class="vertical-align-parent">
+            <a href="https://github.com/GeorginaHughes/georginahughes.com" target="_blank">View Site Source</a>
+        </li>
+        <!--<li class="vertical-align-parent"><a href="#/contact">Contact</a></li>-->
+    </ul>
+</nav>
+
+<h1 ng-bind="Page.getTitle()">Georgina Hughes</h1>
+
+<main ng-view class="{{Page.getMainClass()}}">
+</main>
+
+
+
 <script src="bundle.js"
         type="text/javascript"
         charset="utf-8">

@@ -1,3 +1,121 @@
+html{
+    background:#010101
+}
+*{
+    color:#CADDFD;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing:border-box
+}
 body{
-    background: brown;
+    padding:0 2rem 2rem
+}
+h1{
+    font-size:9rem;
+    text-align:center;
+    margin:0 0 0.5rem 0;
+    color:#FAFFDF
+}
+h2{
+    text-align:center;
+    font-size:4rem;
+    color:#A96B53;
+    margin:0 0 2rem 0
+}
+h3{
+    color:#A96B53;
+    font-size:1.6rem;
+    margin:2.5rem 0 1.5rem 0
+}
+p{
+    color:#FAFFDF;margin:0 0 0.8rem 0
+}
+a{
+    text-decoration:none
+}
+a:hover{
+    text-decoration:underline
+}
+.main.menu{
+    text-align:center
+}
+.main.menu .toggle{
+    height:170px
+}
+.main.menu .icon{
+    font-size:5rem;
+    height:110px
+}
+.main.menu ul{
+    display:none
+}
+.main.menu ul.menu-open{
+    display:block
+}
+.main.menu li{
+    height:6rem
+}
+.main.menu a{
+    font-size:3rem
+}
+.vertical-align-parent{
+    display:table;
+    width:100%
+}
+.vertical-align-parent>*{
+    display:table-cell;
+    vertical-align:middle
+}
+.cv .menu li{
+    height:4rem
+}
+.cv .date{
+    font-size:1.2rem
+}
+.cv .secondary.date{
+    font-size:0.9rem
+}
+.cv .technologies li{
+    color:#FAFFDF
+}
+@media (min-device-width: 768px){
+    body{
+        max-width:1000px;
+        margin:0 auto
+    }
+    h1{
+        margin:0 0 50px
+    }
+    p,
+    li{
+        line-height:1.5rem
+    }
+    .main.menu .toggle{
+        display:none
+    }
+    .main.menu ul{
+        display:block;
+        height:3rem
+    }
+    .main.menu li{
+        display:inline-block;
+        width:initial;
+        height:3rem;
+        padding:0.5rem 0
+    }
+    .main.menu li a{
+        display:block;
+        font-size:1.5rem;
+        padding:10px
+    }
+    .cv{
+        margin:0 10%
+    }
+    .cv .menu li{
+        display:inline-block;
+        height:inherit
+    }
+    .cv .menu a{
+        display:block;
+        padding:10px
+    }
 }
