@@ -1,1 +1,10 @@
+node_modules/
 .idea/
+.grunt/
+.sass-cache/
+scripts/buffer/
+scripts/dist/
+styles/build/
+styles/dist/
+npm-debug.log
+*.DS_STORE
