@@ -1,0 +1,15 @@
+{
+  "name": "georginahughes.com",
+  "version": "1.0.0",
+  "description": "My Website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorginaHughes/georginahughes.com.git"
+  },
+  "author": "Georgina Hughes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeorginaHughes/georginahughes.com/issues"
+  },
+  "homepage": "https://github.com/GeorginaHughes/georginahughes.com#readme"
+}
