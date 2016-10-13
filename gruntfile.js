@@ -1,32 +1,8 @@
 module.exports = function (grunt) {
     grunt.initConfig({
-        version: grunt.file.read('version.txt'),
         pkg: grunt.file.readJSON('package.json'),
 
         //JavaScript
-
-
-        /**
-         * This is JSHint. It prevents the JavaScript process from continuing if there are any JS errors
-         * detected. It is configured to use the default JSHint instead of any other, this may be changed
-         * in the future.
-         * all:				This lists the files that JSHint should check, and allows for inclusion of all
-         *					files in all sub-directories.
-         * options.reporter: This declares the plugin that is used to output any messages. jshint-stylish
-         *					is as stylish as it sounds.
-         * options.globals:	This tells JSHint about global variables that may be declared elsewhere.
-         */
-
-        jshint: {
-            all: ['gruntfile.js', 'scripts/src/**/*.js'],
-            options: {
-                reporter: require('jshint-stylish'),
-                globals: {
-                    'jQuery': true
-                }
-            }
-        },
-
         /**
          * This is concat. It concatenates all the JavaScript files so that the next tasks can do their jobs with ease.
          * options.banner:	This is a string to append to the outputted file.
@@ -36,10 +12,13 @@ module.exports = function (grunt) {
 
         concat: {
             options: {
-                banner: '/*Version: <%= version %>, Date: <%= grunt.template.today("yyyy-mm-dd h:MM:ss") %>*/'
+                banner: '/*Date: <%= grunt.template.today("yyyy-mm-dd h:MM:ss") %>*/'
             },
-            gh: {
-                src: ['scripts/src/Apps/app.js', 'scripts/src/cv/*.js', 'scripts/src/home/*.js', 'scripts/src/links/*.js', 'scripts/src/page/*.js', 'scripts/src/Apps/ghConfiguration.js', '!scripts/modules/**/*.spec.js'],
+            dist: {
+                src: ['src/App/app.js',
+                    'src/App/configuration.js',
+                    'src/page/Factory.js',
+                    'src/home/Controller.js'],
                 dest: 'scripts/buffer/gh.concat.js'
             }
         },
@@ -88,7 +67,7 @@ module.exports = function (grunt) {
             build: {
                 options: {
                     beautify: false,
-                    banner: '/*Product: <%= pkg.name %>, Version: <%= version %>, Date: <%= grunt.template.today("yyyy-mm-dd h:MM:ss") %>*/',
+                    banner: '/*Product: <%= pkg.name %>, Date: <%= grunt.template.today("yyyy-mm-dd h:MM:ss") %>*/',
                     compress: {
                         global_defs: {
                             "DEBUG": false
@@ -103,7 +82,7 @@ module.exports = function (grunt) {
                 options: {
                     beautify: true,
                     preserveComments: true,
-                    banner: '/*Product: <%= pkg.name %>, Version: <%= version %>, Date: <%= grunt.template.today("yyyy-mm-dd h:MM:ss") %>*/',
+                    banner: '/*Product: <%= pkg.name %>, Date: <%= grunt.template.today("yyyy-mm-dd h:MM:ss") %>*/',
                     compress: {
                         global_defs: {
                             "DEBUG": true
@@ -129,7 +108,7 @@ module.exports = function (grunt) {
          * files:				The source file and where to output to, in the format output: input.
          */
 
-        sass: {
+        /*sass: {
             dist: {
                 options: {
                     style: 'compressed',
@@ -140,7 +119,7 @@ module.exports = function (grunt) {
                     'styles/dist/gh.min.css': 'styles/src/gh.scss'
                 }
             }
-        },
+        },*/
 
         //Tools
 
@@ -179,7 +158,6 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -191,6 +169,5 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('watchJs', ['watch:scripts']);
     grunt.registerTask('watchCss', ['watch:styles']);
-    grunt.registerTask('development', ['clean:previousBuild', 'jshint', 'concat', 'ngAnnotate', 'uglify:dev', 'sass', 'clean:jsBuffer']);
-    grunt.registerTask('production', ['clean:previousBuild', 'jshint', 'jasmine', 'concat', 'ngAnnotate', 'uglify:build', 'sass', 'autoprefixer', 'clean:cssUnprefixed', 'clean:jsBuffer']);
+    grunt.registerTask('development', ['clean:previousBuild', 'concat']);
 };
