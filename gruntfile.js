@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                     'src/App/configuration.js',
                     'src/page/Factory.js',
                     'src/home/Controller.js'],
-                dest: 'scripts/buffer/gh.concat.js'
+                dest: 'scripts/gh.js'
             }
         },
 
