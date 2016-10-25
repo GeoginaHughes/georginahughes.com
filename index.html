@@ -5,12 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <title ng-bind="Page.getTitle()"></title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
 </head>
 <body ng-cloak
       layout="column">
 <md-toolbar layout-padding>
-    Title
+    <h1 class="md-display-4">Georgina Hughes Ltd</h1>
 </md-toolbar>
 
 <div flex layout="row">
@@ -19,7 +20,7 @@
                 class="md-whiteframe-z3 md-sidenav-left">
         <md-content layout-padding>
             <nav>
-                <ul class="menu-toggle-list">
+                <!--<ul class="menu-toggle-list">
                     <menu-link>
                         <li>
                             <a ui-sref=""
@@ -52,13 +53,36 @@
                             </a>
                         </li>
                     </menu-link>
-                </ul>
+                    <menu-link>
+                        <li>
+                            <a ui-sref="" class="md-button md-ink-ripple">
+                                Book Reviews
+                            </a>
+                        </li>
+                    </menu-link>
+                </ul>-->
             </nav>
+            <div class="cc-license md-caption">
+                <a rel="license"
+                   href="http://creativecommons.org/licenses/by-sa/4.0/">
+                    <img alt="Creative Commons License"
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                </a>
+                <br />
+                This work, and all works created by Georgina Hughes Ltd. available on this site, is licensed under a
+                <a rel="license"
+                   href="http://creativecommons.org/licenses/by-sa/4.0/">
+                    Creative Commons Attribution-ShareAlike 4.0 International License
+                </a>.
+            </div>
         </md-content>
     </md-sidenav>
     <md-content layout-padding
                 ng-view
                 layout="column"
+                class="md-body-1"
+                style="max-width:800px;"
                 flex>
 
     </md-content>
@@ -69,6 +93,6 @@
 <script src="scripts/external/angular-aria.min.js"></script>
 <script src="scripts/external/angular-messages.min.js"></script>
 <script src="scripts/external/angular-material.min.js"></script>
-<script src="scripts/buffer/gh.concat.js"></script>
+<script src="scripts/gh.js"></script>
 </body>
 </html>
