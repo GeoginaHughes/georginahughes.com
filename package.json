@@ -2,17 +2,6 @@
   "name": "georginahughes.com",
   "version": "1.0.0",
   "description": "My Website",
-  "main": "index.js",
-  "dependencies": {
-    "angular": "^1.5.8",
-    "angular-animate": "^1.5.8",
-    "angular-aria": "^1.5.8",
-    "angular-material": "^1.1.1"
-  },
-  "devDependencies": {
-    "css-loader": "^0.25.0",
-    "style-loader": "^0.13.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GeorginaHughes/georginahughes.com.git"
@@ -22,5 +11,23 @@
   "bugs": {
     "url": "https://github.com/GeorginaHughes/georginahughes.com/issues"
   },
-  "homepage": "https://github.com/GeorginaHughes/georginahughes.com#readme"
+  "homepage": "https://github.com/GeorginaHughes/georginahughes.com#readme",
+  "devDependencies": {
+    "angular-route": "^1.5.8",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ng-annotate": "^2.0.2"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.1",
+    "angular-messages": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
 }
