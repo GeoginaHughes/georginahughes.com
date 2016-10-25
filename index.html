@@ -15,10 +15,10 @@
 </md-toolbar>
 
 <div flex layout="row">
-    <md-sidenav flex="15"
+    <md-sidenav flex="25"
                 md-is-locked-open="$mdMedia('gt-md')"
                 class="md-whiteframe-z3 md-sidenav-left">
-        <md-content layout-padding>
+        <md-content> <!--layout-padding-->
             <nav>
                 <!--<ul class="menu-toggle-list">
                     <menu-link>
@@ -62,19 +62,70 @@
                     </menu-link>
                 </ul>-->
             </nav>
-            <div class="cc-license md-caption">
-                <a rel="license"
-                   href="http://creativecommons.org/licenses/by-sa/4.0/">
-                    <img alt="Creative Commons License"
-                         style="border-width:0"
-                         src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-                </a>
-                <br />
-                This work, and all works created by Georgina Hughes Ltd. available on this site, is licensed under a
-                <a rel="license"
-                   href="http://creativecommons.org/licenses/by-sa/4.0/">
-                    Creative Commons Attribution-ShareAlike 4.0 International License
-                </a>.
+
+            <md-toolbar layout="row" class="md-hue-3">
+                <div class="md-toolbar-tools">
+                    <span>Qualifications</span>
+                </div>
+            </md-toolbar>
+            <md-list flex="">
+                <md-list-item class="md-3-line md-long-text">
+                    <img src="images/csm.png"
+                         class="md-avatar"
+                         alt="Certified Scrum Master">
+                    <div class="md-list-item-text">
+                        <h3>Certified ScrumMaster</h3>
+                        <span class="md-subhead">Scrum Alliance</span>
+                        <p>
+                            CSMs understand Scrum values, practices, and applications and provide a level of knowledge
+                            and expertise above and beyond that of typical project managers.
+                        </p>
+                    </div>
+                </md-list-item>
+                <md-list-item class="md-3-line md-long-text">
+                    <img src="images/csp.png"
+                         class="md-avatar"
+                         alt="Certified Scrum Professional">
+                    <div class="md-list-item-text">
+                        <h3>Certified Scrum Professional</h3>
+                        <span class="md-subhead">Scrum Alliance</span>
+                        <p>
+                            Certified Scrum Professionals have demonstrated experience, documented training, and proven
+                            knowledge in the art of Scrum. CSPs challenge their Scrum teams to improve the way Scrum
+                            and other Agile methods are implemented for every project.
+                        </p>
+                    </div>
+                </md-list-item>
+                <md-list-item class="md-3-line md-long-text">
+                    <img src="images/apm.png"
+                         class="md-avatar"
+                         alt="Agile PM">
+                    <div class="md-list-item-text">
+                        <h3>Agile PM</h3>
+                        <span class="md-subhead">APMG Internations</span>
+                        <p>
+                            The focus of agile project management is on developing solutions incrementally enabling
+                            project teams to react effectively to changing requirements, whilst empowering project
+                            personnel and encouraging increased collaboration and ownership.
+                        </p>
+                    </div>
+                </md-list-item>
+            </md-list>
+
+            <div class="cc-license md-caption"
+                 layout-padding>
+                <div>
+                    <a rel="license"
+                       href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        <img alt="Creative Commons License"
+                             style="border-width:0"
+                             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                    </a>
+                    <br />
+                    This work, and all works created by Georgina Hughes Ltd. available on this site, is licensed under a <a rel="license"
+                       href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                        International License</a>.
+                </div>
             </div>
         </md-content>
     </md-sidenav>
